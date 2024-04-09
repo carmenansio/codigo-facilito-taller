@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/toggle.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#sobreMi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <!-- Botón de cambio de tema -->
+                <!-- <button class="theme-toggle">Cambiar Tema</button> -->
+                <div class="theme-toggle-container">
+                    <label class="theme-toggle-switch">
+                        <input type="checkbox" class="theme-toggle-checkbox">
+                        <span class="theme-toggle-slider"></span>
+                    </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <h1>Hola, soy Carmen</h1>
+            <video autoplay muted loop id="heroVideo">
+                <source src="https://cdn.pixabay.com/video/2021/04/15/71122-537102350_large.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </section>
+        <section id="sobreMi">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia maiores dicta autem ducimus incidunt
+                aut. Saepe placeat dolores tenetur nam quibusdam quas sequi qui non, temporibus quisquam adipisci
+                veniam!</p>
+        </section>
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="grid">
+                <!-- Ejemplo de proyecto con imagen aleatoria de Unsplash -->
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=1" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=2" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=3" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=4" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=5" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=6" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=7" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=8" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <article class="proyecto-card">
+                    <img src="https://source.unsplash.com/random/300x200?sig=9" alt="Descripción del Proyecto">
+                    <div class="proyecto-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Descripción breve del proyecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#" class="proyecto-link">Ver más</a>
+                    </div>
+                </article>
+                <!-- Repite para otros proyectos -->
+            </div>
+        </section>
+        <section id="contacto" class="contacto-section">
+            <h2>Contacto</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia maiores dicta autem ducimus incidunt
+                aut. Saepe placeat dolores tenetur nam quibusdam quas sequi qui non, temporibus quisquam adipisci
+                veniam!</p>
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="email" name="email" placeholder="Tu correo electrónico" required />
+                <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Carmen Ansio. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="scripts/toggle.js"></script>
+</body>
+
+</html>

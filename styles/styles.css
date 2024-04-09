@@ -1,0 +1,306 @@
+/*****************
+   FONT STYLES
+ *****************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*****************
+   ROOT STYLES
+ *****************/
+
+
+:root {
+    --primary-color: #22223b;
+    --secondary-color: #9a8c98;
+    --background-color: #f2e9e4;
+    --text-color: var(--primary-color);
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --accent-color: #f72585;
+
+    [data-theme="dark"] {
+        --primary-color: #f2e9e4;
+        --text-color: var(--primary-color);
+        --background-color: #212529;
+        --box-shadow: 0 4px 6px rgba(239, 239, 239, 0.1);
+    }
+}
+
+/*****************
+   RESET STYLES
+ *****************/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+/*****************
+   BODY STYLES
+ *****************/
+
+body {
+    font-family: 'Avenir-Book', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+}
+
+
+/*****************
+   TEXT STYLES
+ *****************/
+h1, h2, h3 {
+    font-family: 'Pano', sans-serif;
+}
+
+ h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+}
+
+
+/*****************
+   NAVBAR STYLES
+ *****************/
+header {
+    font-family: 'Pano', sans-serif;
+    font-size: .8rem;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    z-index: 2;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: var(--box-shadow);
+}
+
+nav {
+    padding: 0 24px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 24px;
+    padding-inline-start: 0;
+
+    li a {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        justify-content: flex-end;
+    }
+}
+  
+/*****************
+   HERO STYLES
+ *****************/
+
+.hero-section {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vw;
+    position: relative;
+    margin-top: 50px;
+}
+
+.hero-section h1 {
+    color: white;
+    backdrop-filter: blur(3px);
+    text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    text-wrap: pretty;
+    text-align: center;
+}
+
+.hero-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*****************
+   ABOUT STYLES
+ *****************/
+
+#sobreMi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    width: 80vw;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+
+/*****************
+   GRID STYLES
+ *****************/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    width: 80vw;
+}
+
+
+.proyecto-card {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.proyecto-card h3 {
+    font-family: 'MaisonNeueExtended-Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.proyecto-info {
+    padding: 1rem;
+
+    > * {
+        margin-bottom: 1rem;
+    }
+}
+
+.proyecto-info h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.proyecto-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.proyecto-link:hover {
+    text-decoration: underline;
+}
+
+/*****************
+   CONTACTO STYLES
+ *****************/
+
+.contacto-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    width: 80vw;
+    padding: 2rem;
+}
+
+.contacto-section p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+form button {
+    font-family: 'Pano', sans-serif;
+    font-size: .7rem;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 200px;
+    border-radius: 50px;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/*****************
+   FOOTER STYLES
+ *****************/
+
+footer {
+    font-family: 'Pano', sans-serif;
+    font-size: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+    background: #fafafa;
+    z-index: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+footer .wrapper {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 649px) {
+    footer .wrapper {
+        flex-direction: column;
+    }
+
+    footer .wrapper h3 {
+        padding-bottom: .8rem;
+    }
+}
+
+
+/*****************
+   MEDIA QUERIES STYLES
+ *****************/
+
